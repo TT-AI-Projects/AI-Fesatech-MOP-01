@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (themeToggle) themeToggle.querySelector('i').className = `fa-solid ${icon}`;
     }
 
-    const savedTheme = localStorage.getItem('tittanium-theme') || 'light';
+    const savedTheme = localStorage.getItem('fesatech-theme') || 'light';
     document.body.setAttribute('data-theme', savedTheme);
     updateThemeIcon(savedTheme);
 
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const current = document.body.getAttribute('data-theme');
         const newTheme = current === 'dark' ? 'light' : 'dark';
         document.body.setAttribute('data-theme', newTheme);
-        localStorage.setItem('tittanium-theme', newTheme);
+        localStorage.setItem('fesatech-theme', newTheme);
         updateThemeIcon(newTheme);
     }
 
