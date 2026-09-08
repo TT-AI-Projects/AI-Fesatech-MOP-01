@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuesta: Agente de Ventas IA | MOP Modular Places</title>
+        <meta name="description" content="Propuesta de Tittanium para MOP Modular Places: un agente de Inteligencia Artificial de ventas que atiende a cada prospecto en WhatsApp 24/7, lo filtra con un cuestionario, lo califica (consulta vs. compra), menciona su página web y agenda una reunión virtual con el asesor.">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="proyecto.css?v=1.0">
+</head>
+<body>
+    <!-- Logo móvil -->
+    <div class="mobile-logo" id="mobileLogo">
+        <img src="logo.png" alt="Tittanium">
+    </div>
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <button class="close-menu-btn" id="closeMenuBtn">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        
+        <div class="logo">
+            <img src="logo.png" alt="Tittanium">
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="#" data-page="inicio" class="active"><i class="fa-solid fa-house"></i> <span>Inicio</span></a></li>
+            
+            <li class="nav-divider"></li>
+            
+            <li><a href="#" data-page="descripcion-proyecto"><i class="fa-solid fa-file-contract"></i> <span>Descripción del proyecto</span></a></li>
+            <li><a href="#" data-page="solucion-planteada"><i class="fa-solid fa-lightbulb"></i> <span>Solución propuesta</span></a></li>
+            <li><a href="#" data-page="planes-servicio"><i class="fa-solid fa-cubes"></i> <span>Propuesta Comercial</span></a></li>
+            
+            <li class="nav-divider"></li>
+            
+            <li><a href="#" data-page="matriz-escalamiento"><i class="fa-solid fa-network-wired"></i> <span>Matriz de Escalamiento</span></a></li>
+            <li><a href="#" data-page="certificaciones"><i class="fa-solid fa-award"></i> <span>Nuestras Certificaciones</span></a></li>
+            <li><a href="#" data-page="condiciones-comerciales"><i class="fa-solid fa-handshake"></i> <span>Condiciones Comerciales</span></a></li>
+            <li><a href="#" data-page="contacto"><i class="fa-solid fa-envelope"></i> <span>Contacto</span></a></li>
+        </ul>
+        
+        <div class="sidebar-footer">
+            <a href="https://wa.me/573216362185" target="_blank" class="whatsapp-btn-large">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>WhatsApp</span>
+            </a>
+            <div class="footer-icons">
+                <a href="https://www.tittanium.co/" target="_blank" class="footer-icon" title="Web"><i class="fa-solid fa-globe"></i></a>
+                <a href="https://www.linkedin.com/company/" target="_blank" class="footer-icon" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/tittanium_sas" target="_blank" class="footer-icon" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <button class="footer-icon theme-toggle-btn" id="themeToggle" title="Tema"><i class="fa-solid fa-moon"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Botón menú móvil -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <!-- INICIO -->
+        <section id="inicio" class="page active">
+            <div class="hero-banner">
+                <div class="hero-content">
+                    <div class="hero-date-badge">
+                        <i class="fa-solid fa-calendar-day"></i> <span id="hero-date">8 de Septiembre de 2026</span>
+                    </div>
+                    <h1>Esta es nuestra propuesta <br><span class="typing-container"><span class="highlight" id="typing-text"></span><span class="typing-cursor">|</span></span></h1>
+                    <p>Reemplazamos la atención manual y dispersa de tus canales de venta por un <strong>agente de inteligencia artificial a la medida</strong>: recibe a cada interesado en WhatsApp, lo saluda cordialmente, le hace un breve cuestionario y lo filtra —separando a quien solo consulta de quien quiere comprar su casa o proyecto modular—, lo califica y al final agenda una reunión virtual con tu asesor. Atiende 24/7, menciona tu página web con toda la información y convierte cada TikTok, publicación o campaña en una oportunidad ordenada.</p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn-primary" data-page="solucion-planteada">Conoce el Agente de Ventas IA <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#" class="btn-secondary" data-page="planes-servicio">Ver Propuesta Comercial</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-steps">
+                        <div class="step-card">
+                            <div class="step-num">1</div>
+                            <div class="step-info">
+                                <h3>Diagnóstico</h3>
+                                <p>Entendemos tu flujo actual, tus procesos, tiempos y puntos de dolor</p>
+                                <span class="step-badge preventa">Análisis</span>
+                            </div>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-num">2</div>
+                            <div class="step-info">
+                                <h3>Diseño del Agente</h3>
+                                <p>Construimos el agente de IA a la medida de tu operación y de tus canales</p>
+                                <span class="step-badge consultoria">Desarrollo</span>
+                            </div>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-num">3</div>
+                            <div class="step-info">
+                                <h3>Puesta en Marcha</h3>
+                                <p>Lo conectamos con tus herramientas y lo dejamos operando en producción</p>
+                                <span class="step-badge bolsa">Go-Live</span>
+                            </div>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-num">4</div>
+                            <div class="step-info">
+                                <h3>Operación & Mejora</h3>
+                                <p>Acompañamiento continuo: mantenimiento, actualizaciones y ajustes a la medida de tu operación</p>
+                                <span class="step-badge suscripcion">Mejora continua</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Certificaciones en recuadros blancos -->
+            <div class="certifications-strip">
+                <h3 class="cert-title">
+                    <i class="fa-solid fa-award"></i>
+                    Tu éxito en manos de un equipo certificado
+                </h3>
+                <div class="cert-track">
+                    <div class="cert-card">
+                        <img src="img/certificaciones/azure-virtual-desktop.png" alt="Azure Virtual Desktop Specialty">
+                        <span class="cert-label">Azure Virtual Desktop</span>
+                    </div>
+                    <div class="cert-card">
+                        <img src="img/certificaciones/azure-solutions-architect.png" alt="Azure Solutions Architect Expert">
+                        <span class="cert-label">Solutions Architect</span>
+                    </div>
+                    <div class="cert-card">
+                        <img src="img/certificaciones/azure-network-engineer.png" alt="Azure Network Engineer Associate">
+                        <span class="cert-label">Network Engineer</span>
+                    </div>
+                    <div class="cert-card">
+                        <img src="img/certificaciones/azure-administrator.png" alt="Azure Administrator Associate">
+                        <span class="cert-label">Azure Administrator</span>
+                    </div>
+                    <div class="cert-card">
+                        <img src="img/certificaciones/azure-data-fundamentals.png" alt="Azure Data Fundamentals">
+                        <span class="cert-label">Data Fundamentals</span>
+                    </div>
+                    <div class="cert-card">
+                        <img src="img/certificaciones/security-compliance-identity.png" alt="Security Compliance and Identity Fundamentals">
+                        <span class="cert-label">Security & Identity</span>
+                    </div>
+                    <div class="cert-card">
+                        <img src="img/certificaciones/azure-fundamentals.png" alt="Azure Fundamentals">
+                        <span class="cert-label">Azure Fundamentals</span>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <!-- EL PROBLEMA ACTUAL -->
+        <section id="descripcion-proyecto" class="page">
+            <div class="dashboard-card">
+                <h2><i class="fa-solid fa-triangle-exclamation text-yellow"></i> Descripción del proyecto</h2>
+                <p class="section-desc" style="margin-bottom: 1rem;">Tus canales —TikTok, Instagram y tu página web— generan interés real por tus casas y proyectos modulares, pero hoy todo ese interés llega <strong>desordenado al WhatsApp</strong>. El equipo comercial responde a cada mensaje sin saber quién está listo para comprar, quién quiere solo una cotización y quién apenas explora. Este modelo te ha funcionado, pero deja que oportunidades reales se enfríen mientras se invierte tiempo en consultas que nunca van a comprar.</p>
+                <p class="section-desc">Estos son los principales puntos de dolor que identificamos en tu proceso comercial actual:</p>
+            </div>
+
+            <div class="services-overview-grid">
+                <div class="service-overview-card">
+                    <div class="service-overview-icon"><i class="fa-solid fa-share-nodes"></i></div>
+                    <div class="service-overview-content">
+                        <h4>Interés disperso y sin clasificar</h4>
+                        <p>Cada campaña dispara decenas de mensajes desde varios canales. Sin un primer filtro, nadie distingue al comprador real del que solo curiosea, y el WhatsApp se convierte en un listado sin orden ni prioridad.</p>
+                    </div>
+                </div>
+
+                <div class="service-overview-card">
+                    <div class="service-overview-icon"><i class="fa-solid fa-clock"></i></div>
+                    <div class="service-overview-content">
+                        <h4>Atención que no es inmediata</h4>
+                        <p>Tus prospectos escriben a cualquier hora del día. Fuera del horario comercial los mensajes quedan sin respuesta, y el interés que nació en una publicación se pierde antes de que alguien conteste.</p>
+                    </div>
+                </div>
+
+                <div class="service-overview-card highlighted">
+                    <div class="service-overview-icon"><i class="fa-solid fa-filter-circle-dollar"></i></div>
+                    <div class="service-overview-content">
+                        <h4>Sin calificación del lead</h4>
+                        <p>No hay un criterio claro para saber qué tan avanzado está cada cliente. El equipo comercial invierte horas y mensajes en consultas que no van a cerrar, en lugar de priorizar a quien está listo para comprar su casa modular.</p>
+                    </div>
+                </div>
+
+                <div class="service-overview-card">
+                    <div class="service-overview-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                    <div class="service-overview-content">
+                        <h4>Agenda manual de reuniones</h4>
+                        <p>Coordinar la cita virtual con el asesor se hace de forma manual por el chat, con idas y vueltas de horarios, mensajes perdidos y citas que terminan por no agendarse.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-card project-info-needs">
+                <h3><i class="fa-solid fa-arrows-left-right-to-line icon-green-small"></i> Hoy vs. Con un Agente de Ventas con IA</h3>
+                <p class="mb-4">Comparemos cómo cambia la operación comercial de MOP Modular Places cuando pasas de atender cada mensaje a mano a contar con un agente propio de IA.</p>
+                <div class="info-needs-grid">
+                    <div class="need-item">
+                        <i class="fa-solid fa-headset"></i>
+                        <h4>Atención al prospecto</h4>
+                        <p>Hoy: depende del horario comercial y de quién esté disponible. Con IA: responde 24/7, al instante y con el mismo tono cordial en cada canal.</p>
+                    </div>
+                    <div class="need-item">
+                        <i class="fa-solid fa-filter"></i>
+                        <h4>Filtro de intención</h4>
+                        <p>Hoy: todos los mensajes llegan por igual al WhatsApp. Con IA: un breve cuestionario separa a quien solo consulta de quien quiere comprar su proyecto modular.</p>
+                    </div>
+                    <div class="need-item">
+                        <i class="fa-solid fa-gauge-high"></i>
+                        <h4>Calificación del cliente</h4>
+                        <p>Hoy: se prioriza según el criterio de quien contesta. Con IA: cada lead recibe un puntaje y una etiqueta que ordena la fila del equipo comercial.</p>
+                    </div>
+                    <div class="need-item">
+                        <i class="fa-solid fa-tower-broadcast"></i>
+                        <h4>Canales de venta</h4>
+                        <p>Hoy: TikTok, Instagram y la web generan interés sin un destino claro. Con IA: todo el interés se captura y se encamina de forma ordenada a WhatsApp.</p>
+                    </div>
+                    <div class="need-item">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <h4>Reuniones virtuales</h4>
+                        <p>Hoy: la cita con el asesor se coordina a mano. Con IA: el agente agenda la reunión virtual al final de la conversación, sin idas y vueltas.</p>
+                    </div>
+                    <div class="need-item">
+                        <i class="fa-solid fa-globe"></i>
+                        <h4>Información de tu página web</h4>
+                        <p>Hoy: el contenido hay que repetirlo en cada chat. Con IA: el agente menciona tu web actualizada (www.mopmodularplaces.com) donde está toda la información.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EL SISTEMA DE IA -->
+        <section id="solucion-planteada" class="page">
+            <div class="dashboard-card">
+                <h2><i class="fa-solid fa-robot"></i> Solución propuesta</h2>
+                <p class="section-desc">Creamos agentes de inteligencia artificial que trabajan <strong>24/7 junto a tu equipo de ventas</strong>: reciben, entienden y responden a cada prospecto con el tono de tu marca. Aplicado a MOP Modular Places, el agente se hace cargo de la primera conversación comercial —la filtra, la califica y agenda la reunión virtual— mientras tu asesor se concentra en cerrar con los leads que de verdad importan.</p>
+            </div>
+
+            <div class="dashboard-card solution-detail-card">
+                <div class="solution-header-block">
+                    <div class="icon-circle-large">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <div>
+                        <h3>Agente de Ventas con IA para MOP Modular Places</h3>
+                        <p class="subtitle">Del interés en TikTok, Instagram y tu web a una reunión virtual con tu asesor: filtrado, calificado y ordenado</p>
+                    </div>
+                </div>
+                
+                <div class="solution-body">
+                    <p class="lead-text">El agente toma la primera conversación con cada prospecto de principio a fin: lo recibe cordialmente, le propone un breve cuestionario, lo filtra y lo califica, y cuando detecta intención real de compra <strong>agenda una reunión virtual con tu equipo</strong>. Tu asesor pasa a atender solo los leads listos para avanzar.</p>
+                    
+                    <p>Es una solución diseñada a la medida de MOP Modular Places y entrenada con la información de tu portafolio y de tu página web actualizada. Se conecta a los canales de donde viene tu tráfico (TikTok, Instagram y web) y atiende en WhatsApp, el canal donde hoy te escriben tus clientes. Todo corre sobre infraestructura dedicada gestionada por nosotros, con la operación bajo control.</p>
+                </div>
+                
+                <div class="solution-features">
+                    <div class="sol-feature">
+                        <i class="fa-solid fa-hand-peace"></i>
+                        <div>
+                            <h4>Saludo cordial y bienvenida</h4>
+                            <p>El agente recibe a cada persona que escribe, se presenta en nombre de MOP Modular Places y abre la conversación con calidez, sin hacer esperar a nadie.</p>
+                        </div>
+                    </div>
+                    <div class="sol-feature">
+                        <i class="fa-solid fa-clipboard-question"></i>
+                        <div>
+                            <h4>Cuestionario para filtrar</h4>
+                            <p>Propone unas preguntas breves y claras que separan a quien solo quiere una consulta de quien quiere comprar una casa o un proyecto modular.</p>
+                        </div>
+                    </div>
+                    <div class="sol-feature">
+                        <i class="fa-solid fa-ranking-star"></i>
+                        <div>
+                            <h4>Calificación del cliente</h4>
+                            <p>Con las respuestas, asigna a cada lead un puntaje y una etiqueta (consulta, interesado o listo para comprar) que ordena la fila de tu equipo comercial.</p>
+                        </div>
+                    </div>
+                    <div class="sol-feature">
+                        <i class="fa-solid fa-globe"></i>
+                        <div>
+                            <h4>Mención de tu página web</h4>
+                            <p>El agente dirige a cada persona a www.mopmodularplaces.com, donde está toda la información actualizada de tus modelos y proyectos.</p>
+                        </div>
+                    </div>
+                    <div class="sol-feature">
+                        <i class="fa-solid fa-tower-broadcast"></i>
+                        <div>
+                            <h4>Canal de origen registrado</h4>
+                            <p>Si el contacto llegó desde TikTok, Instagram o la web, el agente lo captura y lo deja registrado, para que sepas qué canal está generando las mejores oportunidades.</p>
+                        </div>
+                    </div>
+                    <div class="sol-feature">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <div>
+                            <h4>Agenda de la reunión virtual</h4>
+                            <p>Al cierre de la conversación, el agente agenda la reunión virtual con el asesor en los horarios disponibles, sin idas y vueltas de coordinación.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-card project-info-needs">
+                <h3><i class="fa-solid fa-table-columns icon-green-small"></i> El panel de leads para tu equipo comercial</h3>
+                <p class="mb-4">Cada conversación queda registrada y visible para tu equipo en un panel a la medida, donde se ve el interés filtrado y calificado para priorizar:</p>
+                <div class="info-needs-grid">
+                    <div class="need-item">
+                        <i class="fa-solid fa-ranking-star"></i>
+                        <h4>Lead calificado</h4>
+                        <p>Consulta, interesado o listo para comprar: cada prospecto llega etiquetado para que el equipo sepa a quién atender primero.</p>
+                    </div>
+                    <div class="need-item">
+                        <i class="fa-solid fa-filter"></i>
+                        <h4>Intención clara</h4>
+                        <p>El resultado del cuestionario queda a la vista, separando a quien solo quiere información de quien tiene intención real de comprar.</p>
+                    </div>
+                    <div class="need-item">
+                        <i class="fa-solid fa-comments"></i>
+                        <h4>Historial de la conversación</h4>
+                        <p>El asesor retoma el chat justo donde lo dejó el agente, sin repetir preguntas ni perder el contexto del cliente.</p>
+                    </div>
+                    <div class="need-item">
+                        <i class="fa-solid fa-tower-broadcast"></i>
+                        <h4>Canal de origen</h4>
+                        <p>Sabes si el lead llegó por TikTok, Instagram o la web, para medir qué canal está trayendo las mejores oportunidades.</p>
+                    </div>
+                    <div class="need-item">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <h4>Reuniones agendadas</h4>
+                        <p>Las citas virtuales que agrega el agente aparecen ordenadas, listas para que tu asesor haga seguimiento.</p>
+                    </div>
+                    <div class="need-item">
+                        <i class="fa-solid fa-user-clock"></i>
+                        <h4>Respuesta inmediata</h4>
+                        <p>Como el agente responde al instante, ningún lead se enfría esperando por un horario de atención.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-card project-info-needs">
+                <h3><i class="fa-solid fa-circle-info icon-green-small"></i> Alcance de la Solución</h3>
+                <p class="mb-4">Para que tengas total claridad, el agente de ventas cubre estos elementos dentro de la puesta en marcha:</p>
+                <div class="info-needs-grid">
+                    <div class="need-item">
+                        <i class="fa-solid fa-check text-green"></i>
+                        <h4>Incluido</h4>
+                        <p>Agente conversacional entrenado con tu portafolio y tu web, cuestionario de filtrado, calificación de leads, mención de la web, registro del canal de origen, agenda de reunión virtual, panel de leads, infraestructura y mantenimiento.</p>
+                    </div>
+                    <div class="need-item">
+                        <i class="fa-solid fa-ban text-red"></i>
+                        <h4>No incluido</h4>
+                        <p>El cierre comercial y el acompañamiento final de la venta los hace tu asesor en la reunión virtual; el agente prepara y agenda al cliente, y deja la operación en manos de tu equipo.</p>
+                    </div>
+                    <div class="need-item">
+                        <i class="fa-solid fa-user-check"></i>
+                        <h4>Comenzamos por ventas</h4>
+                        <p>El primer agente se enfoca en filtrar y calificar leads de venta. Más adelante se pueden sumar nuevos flujos sobre la misma base, para crecer sin partir de cero.</p>
+                    </div>
+                    <div class="need-item">
+                        <i class="fa-solid fa-gauge-high"></i>
+                        <h4>Panel de leads en tiempo real</h4>
+                        <p>Interés filtrado, calificación y citas agendadas al día, para que tu equipo comercial decida a quién atender primero.</p>
+                    </div>
+                    <div class="need-item">
+                        <i class="fa-solid fa-arrows-rotate"></i>
+                        <h4>Mejora continua</h4>
+                        <p>En la operación mensual se incluyen ajustes al flujo de conversación, actualización del modelo con los datos de tu web y optimización del agente.</p>
+                    </div>
+                    <div class="need-item">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h4>Propiedad y seguridad</h4>
+                        <p>Toda la información de tus leads vive en tu entorno con acceso controlado por roles; la propiedad de tus datos es tuya.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="solution-bottom-actions">
+                <div class="dashboard-card cta-card">
+                    <h4>¿Quieres ver los números?</h4>
+                    <p>Conoce la estructura comercial del agente de ventas: una puesta en marcha en el Mes 1 con un fee único que deja el agente operando en WhatsApp, y luego una operación mensual que incluye la infraestructura, el modelo de IA y la mejora continua.</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn-primary" data-page="planes-servicio">Ver Propuesta Comercial <i class="fa-solid fa-cubes"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROPUESTA COMERCIAL -->
+        <section id="planes-servicio" class="page">
+            <div class="dashboard-card">
+                <h2><i class="fa-solid fa-cubes"></i> Propuesta Comercial</h2>
+                <p class="section-desc">La oferta es un <strong>paquete integral con temporalidad</strong>: una puesta en marcha en el Mes 1 (fee único) que deja el agente de ventas operando en producción, y un servicio SaaS recurrente a partir del Mes 2 que incluye la operación de tu agente en WhatsApp, infraestructura, modelo de IA, mantenimiento, actualizaciones y soporte. No hay que elegir entre opciones: es un solo paquete secuencial.</p>
+            </div>
+
+            <!-- TIMELINE VISUAL: Mes 1 → Mes 2+ -->
+            <div class="escalation-flow">
+                <div class="escalation-step">
+                    <div class="step-header">
+                        <span class="level-tag">MES 1</span>
+                        <h3>Puesta en Marcha</h3>
+                    </div>
+                    <div class="step-body">
+                        <p class="step-desc">Diseño, configuración, integración y despliegue del agente de ventas y del panel de leads.</p>
+                        <p class="step-detail">Fee único · <strong>$4.500.000 COP + IVA</strong></p>
+                    </div>
+                </div>
+
+                <div class="flow-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+
+                <div class="escalation-step">
+                    <div class="step-header">
+                        <span class="level-tag">MES 2 en adelante</span>
+                        <h3>Operación SaaS Mensual</h3>
+                    </div>
+                    <div class="step-body">
+                        <p class="step-desc">Operación continua de tu agente de ventas en WhatsApp: infraestructura, modelo, actualizaciones y soporte.</p>
+                        <p class="step-detail">Recurrencia mensual · <strong>$1.100.000 COP + IVA / mes</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dos fases como tarjetas numeradas -->
+            <div class="info-needs-grid">
+                <!-- FASE 1 -->
+                <div class="need-item">
+                    <i class="fa-solid fa-rocket"></i>
+                    <span class="step-badge consultoria" style="align-self: flex-start; margin-bottom: 0.5rem;">Fase 1 · Mes 1</span>
+                    <h4>Puesta en Marcha</h4>
+                    <p>Levantamiento de tus canales de venta (TikTok, Instagram y web), configuración del agente con el cuestionario de filtrado y la calificación, integración con WhatsApp, construcción del panel de leads, agenda de reunión virtual, pruebas y go-live en producción.</p>
+                    <p class="mt-2" style="font-weight: 700; font-size: 1.1rem; color: var(--primary);">$4.500.000 <span style="color: var(--text-muted); font-weight: 400; font-size: 0.85rem;">COP + IVA · cobro único</span></p>
+                </div>
+
+                <!-- FASE 2 -->
+                <div class="need-item">
+                    <i class="fa-solid fa-server"></i>
+                    <span class="step-badge bolsa" style="align-self: flex-start; margin-bottom: 0.5rem;">Fase 2 · Mes 2 en adelante</span>
+                    <h4>Operación SaaS Mensual</h4>
+                    <p>El cliente paga una recurrencia por consumir el agente operando: la plataforma viva con disponibilidad garantizada, modelo de IA incluido, panel de leads, infraestructura y soporte continuo.</p>
+                    <p class="text-muted mt-2" style="font-size: 0.85rem;"><i class="fa-solid fa-infinity"></i> Operación continua · infraestructura · LLM · soporte · mejoras</p>
+                    <p class="mt-2" style="font-weight: 700; font-size: 1.1rem; color: var(--primary);">$1.100.000 <span style="color: var(--text-muted); font-weight: 400; font-size: 0.85rem;">COP + IVA / mes</span></p>
+                    <p class="mt-2" style="font-size: 0.8rem; color: var(--text-muted);"><em>Permanencia mínima: 6 meses en la recurrencia</em></p>
+                </div>
+            </div>
+
+            <!-- Qué incluye el paquete completo -->
+            <div class="dashboard-card project-info-needs">
+                <h3><i class="fa-solid fa-box-open icon-green-small"></i> Qué incluye el paquete completo</h3>
+                <p class="mb-4">El paquete cubre tanto el setup inicial como la operación SaaS recurrente. Todos estos elementos están contemplados:</p>
+                <div class="info-needs-grid">
+                    <div class="need-item">
+                        <i class="fa-solid fa-comments"></i>
+                        <h4>Agente de ventas en WhatsApp</h4>
+                        <p>Recibe, saluda y responde a cada prospecto con tu tono de marca, 24/7 y sin filas de espera.</p>
+                    </div>
+                    <div class="need-item">
+                        <i class="fa-solid fa-clipboard-question"></i>
+                        <h4>Cuestionario y calificación de leads</h4>
+                        <p>Filtra a cada contacto con preguntas breves y lo clasifica entre consulta, interesado o listo para comprar.</p>
+                    </div>
+                    <div class="need-item">
+                        <i class="fa-solid fa-table-columns"></i>
+                        <h4>Panel de leads a la medida</h4>
+                        <p>Interés filtrado, canal de origen y reuniones agendadas, incluidos y actualizados en tiempo real.</p>
+                    </div>
+                    <div class="need-item">
+                        <i class="fa-solid fa-server"></i>
+                        <h4>Infraestructura y LLM</h4>
+                        <p>Hosting del agente y licenciamiento del modelo de inteligencia artificial, todo incluido en la operación.</p>
+                    </div>
+                    <div class="need-item">
+                        <i class="fa-solid fa-arrows-rotate"></i>
+                        <h4>Actualizaciones y mejoras</h4>
+                        <p>El agente evoluciona durante la operación: nuevos flujos (PQRS, soporte), ajustes de conversación y optimizaciones continuas.</p>
+                    </div>
+                    <div class="need-item">
+                        <i class="fa-solid fa-headset"></i>
+                        <h4>Soporte y mantenimiento</h4>
+                        <p>Acompañamiento técnico continuo, backups, monitorización y resolución de incidentes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLA simplificado: una sola columna de tiempos -->
+            <div class="dashboard-card table-card">
+                <h3><i class="fa-solid fa-triangle-exclamation"></i> Tiempos de Resolución SLA</h3>
+                <p class="section-desc mb-4">Acuerdo de niveles de servicio (SLA) para la atención e inicio de mitigación de incidentes del agente de ventas, según su nivel de criticidad.</p>
+                <div class="severity-table-wrapper">
+                    <table class="severity-table">
+                        <thead>
+                            <tr>
+                                <th>Severidad</th>
+                                <th>Criterio Técnico</th>
+                                <th>Tiempo de Respuesta</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="sev-badge sev-critical">Crítica (Sev-1)</span></td>
+                                <td>Agente caído o sin capacidad de atender conversaciones</td>
+                                <td class="highlight-sla">4h mitigación</td>
+                            </tr>
+                            <tr>
+                                <td><span class="sev-badge sev-high">Alta (Sev-2)</span></td>
+                                <td>Degradación severa (el agente no responde o falla la agenda de reuniones)</td>
+                                <td class="highlight-sla">8h</td>
+                            </tr>
+                            <tr>
+                                <td><span class="sev-badge sev-medium">Media (Sev-3)</span></td>
+                                <td>Incidente acotado con atención alterna disponible (p. ej. relevo al asesor)</td>
+                                <td class="highlight-sla">24h</td>
+                            </tr>
+                            <tr>
+                                <td><span class="sev-badge sev-low">Baja (Sev-4)</span></td>
+                                <td>Consultas, mejoras menores o ajustes al panel de leads</td>
+                                <td class="highlight-sla">48h</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="dashboard-card penalty-card">
+                <h3><i class="fa-solid fa-info-circle"></i> Notas comerciales</h3>
+                <ul style="padding-left: 1.25rem; color: var(--text-secondary); line-height: 1.8;">
+                    <li><strong>No hay que elegir entre opciones:</strong> la propuesta es un único paquete con temporalidad secuencial (Mes 1 + Mes 2 en adelante).</li>
+                    <li><strong>El cierre de la venta es de tu equipo:</strong> el agente filtra, califica y agenda la reunión virtual; el acompañamiento final y la negociación los hace tu asesor en esa reunión.</li>
+                    <li><strong>El valor de puesta en marcha</strong> cubre el diseño del flujo de conversación, la configuración del cuestionario y la calificación, la integración con WhatsApp, la construcción del panel de leads, las pruebas y el go-live, sin costo adicional por horas.</li>
+                    <li><strong>Operación mensual:</strong> inicia a partir del segundo mes posterior al go-live y se factura de manera anticipada.</li>
+                    <li><strong>Permanencia mínima:</strong> 6 meses en la recurrencia.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- MATRIZ DE ESCALAMIENTO -->
+        <section id="matriz-escalamiento" class="page">
+            <div class="dashboard-card">
+                <h2><i class="fa-solid fa-sitemap"></i> Matriz de Escalamiento</h2>
+                <p class="section-desc">Contamos con una estructura de soporte técnico organizada por niveles de especialización. Cada tipo de incidente se canaliza para una resolución óptima y oportuna.</p>
+            </div>
+
+            <!-- Flujo de escalamiento -->
+            <div class="escalation-flow">
+                <div class="escalation-step">
+                    <div class="step-header">
+                        <span class="level-tag">NIVEL 1</span>
+                        <h3>Mesa de servicio</h3>
+                    </div>
+                    <div class="step-body">
+                        <p class="step-desc">Recepción, clasificación y resolución de incidentes conocidos.</p>
+                        <p class="step-detail">Soporte básico, a cargo de agente de IA autónomo o personal de nivel 1.</p>
+                    </div>
+                </div>
+
+                <div class="flow-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+
+                <div class="escalation-step">
+                    <div class="step-header">
+                        <span class="level-tag">NIVEL 2</span>
+                        <h3>Soporte de la plataforma</h3>
+                    </div>
+                    <div class="step-body">
+                        <p class="step-desc">Ingenieros especializados en la plataforma SaaS, integraciones y modelos de IA.</p>
+                        <p class="step-detail">Soporte especializado con ingeniero especialista o gerente de proyectos.</p>
+                    </div>
+                </div>
+
+                <div class="flow-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+
+                <div class="escalation-step">
+                    <div class="step-header">
+                        <span class="level-tag">NIVEL 3</span>
+                        <h3>Arquitectura e ingeniería</h3>
+                    </div>
+                    <div class="step-body">
+                        <p class="step-desc">Diagnóstico avanzado y contacto directo con soporte de Microsoft.</p>
+                        <p class="step-detail">Soporte fábrica - escalamiento de tickets a fábrica según el servicio correspondiente.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Penalidades SLA -->
+            <div class="dashboard-card penalty-card mt-4">
+                <h3><i class="fa-solid fa-triangle-exclamation text-yellow"></i> Penalidades SLA</h3>
+                <div class="penalty-body">
+                    <p>El incumplimiento de los niveles de servicio (SLA) comprometidos por parte de nuestro equipo se deriva directamente en <strong>descuentos aplicados sobre el valor mensual del plan</strong> para los meses siguientes.</p>
+                    <p class="text-muted mt-2">Dichos descuentos se calcularán de manera porcentual y dependerán directamente del impacto y la criticidad del servicio afectado.</p>
+                    <p class="text-xs text-muted mt-3" style="border-top: 1px solid var(--border); padding-top: 0.75rem;">
+                        <i class="fa-solid fa-circle-info text-yellow"></i> <strong>Exclusión de Responsabilidad:</strong> Aquellos incidentes o problemas cuya causa raíz sea responsabilidad directa del fabricante (ej. caídas de servicios globales de Microsoft Azure) no entran dentro de las penalidades, ya que en estos escenarios el servicio y los tiempos de resolución están sujetos a los tiempos de respuesta del fabricante correspondiente.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CERTIFICACIONES -->
+        <section id="certificaciones" class="page">
+            <div class="dashboard-card">
+                <h2><i class="fa-solid fa-award"></i> Nuestras Certificaciones</h2>
+                <p class="section-desc">Contamos con certificaciones Microsoft Azure que respaldan nuestra experiencia y compromiso con la excelencia técnica.</p>
+                
+                <div class="cert-grid-large">
+                    <div class="cert-card-large">
+                        <img src="img/certificaciones/azure-virtual-desktop.png" alt="Azure Virtual Desktop Specialty">
+                        <span class="cert-label-large">Azure Virtual Desktop</span>
+                        <span class="cert-level specialty">Specialty</span>
+                    </div>
+                    <div class="cert-card-large">
+                        <img src="img/certificaciones/azure-solutions-architect.png" alt="Azure Solutions Architect Expert">
+                        <span class="cert-label-large">Solutions Architect</span>
+                        <span class="cert-level expert">Expert</span>
+                    </div>
+                    <div class="cert-card-large">
+                        <img src="img/certificaciones/azure-network-engineer.png" alt="Azure Network Engineer Associate">
+                        <span class="cert-label-large">Network Engineer</span>
+                        <span class="cert-level associate">Associate</span>
+                    </div>
+                    <div class="cert-card-large">
+                        <img src="img/certificaciones/azure-administrator.png" alt="Azure Administrator Associate">
+                        <span class="cert-label-large">Azure Administrator</span>
+                        <span class="cert-level associate">Associate</span>
+                    </div>
+                    <div class="cert-card-large">
+                        <img src="img/certificaciones/azure-data-fundamentals.png" alt="Azure Data Fundamentals">
+                        <span class="cert-label-large">Data Fundamentals</span>
+                        <span class="cert-level fundamentals">Fundamentals</span>
+                    </div>
+                    <div class="cert-card-large">
+                        <img src="img/certificaciones/security-compliance-identity.png" alt="Security Compliance and Identity Fundamentals">
+                        <span class="cert-label-large">Security & Identity</span>
+                        <span class="cert-level fundamentals">Fundamentals</span>
+                    </div>
+                    <div class="cert-card-large">
+                        <img src="img/certificaciones/azure-fundamentals.png" alt="Azure Fundamentals">
+                        <span class="cert-label-large">Azure Fundamentals</span>
+                        <span class="cert-level fundamentals">Fundamentals</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONDICIONES COMERCIALES -->
+        <section id="condiciones-comerciales" class="page">
+            <div class="dashboard-card">
+                <h2><i class="fa-solid fa-file-contract"></i> Condiciones Comerciales</h2>
+                <p class="section-desc">Condiciones generales aplicables a la prestación de servicios profesionales, proyectos a la medida y planes de soporte.</p>
+            </div>
+
+            <div class="conditions-grid">
+                <div class="condition-card">
+                    <div class="condition-icon"><i class="fa-solid fa-calendar-day"></i></div>
+                    <div class="condition-content">
+                        <h4>Validez de la Oferta</h4>
+                        <p>La presente oferta tiene validez de treinta (30) días a partir de la fecha de entrega y es de carácter confidencial.</p>
+                    </div>
+                </div>
+
+                <div class="condition-card">
+                    <div class="condition-icon"><i class="fa-solid fa-hourglass-half"></i></div>
+                    <div class="condition-content">
+                        <h4>Duración del Proyecto</h4>
+                        <p>Se realiza un estimado inicial en horas de esfuerzo que puede tener cambios según la disponibilidad del equipo involucrado en la ejecución. Estos cambios deberán ser concertados entre los diferentes equipos de trabajo.</p>
+                    </div>
+                </div>
+
+                <div class="condition-card">
+                    <div class="condition-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                    <div class="condition-content">
+                        <h4>Infraestructura en Microsoft Azure</h4>
+                        <p>La plataforma SaaS se desplega sobre Microsoft Azure; los costos estimados de infraestructura son de referencia y pueden variar por la fluctuación que genere directamente Microsoft.</p>
+                    </div>
+                </div>
+
+                <div class="condition-card">
+                    <div class="condition-icon"><i class="fa-solid fa-percent"></i></div>
+                    <div class="condition-content">
+                        <h4>Exclusión de IVA (Art. 476)</h4>
+                        <p>De acuerdo con el Artículo 476 del Estatuto Tributario Colombiano, el suministro de páginas web, servidores (hosting) y computación en la nube (cloud computing) están excluidos del impuesto sobre las ventas (IVA).</p>
+                    </div>
+                </div>
+
+                <div class="condition-card">
+                    <div class="condition-icon"><i class="fa-solid fa-laptop-house"></i></div>
+                    <div class="condition-content">
+                        <h4>Servicios Remotos</h4>
+                        <p>Los servicios profesionales serán realizados de forma remota.</p>
+                    </div>
+                </div>
+
+                <div class="condition-card">
+                    <div class="condition-icon"><i class="fa-solid fa-key"></i></div>
+                    <div class="condition-content">
+                        <h4>Accesos del Cliente</h4>
+                        <p>El cliente deberá brindar los respectivos accesos para poder realizar la correspondiente configuración y/o migración de servicios.</p>
+                    </div>
+                </div>
+
+                <div class="condition-card">
+                    <div class="condition-icon"><i class="fa-solid fa-circle-plus"></i></div>
+                    <div class="condition-content">
+                        <h4>Nuevos Servicios</h4>
+                        <p>Cuando se requiera incluir nuevos servicios, los mismos deberán ser cotizados y no se encuentran incluidos en esta oferta.</p>
+                    </div>
+                </div>
+
+                <div class="condition-card">
+                    <div class="condition-icon"><i class="fa-solid fa-circle-info"></i></div>
+                    <div class="condition-content">
+                        <h4>Disponibilidad del Servicio</h4>
+                        <p>La disponibilidad del servicio comprometida es del 99.5%, pero no nos hacemos responsables sobre la disponibilidad de la nube, ya que la misma es directa del fabricante.</p>
+                    </div>
+                </div>
+
+                <div class="condition-card">
+                    <div class="condition-icon"><i class="fa-solid fa-receipt"></i></div>
+                    <div class="condition-content">
+                        <h4>Aplicación de IVA</h4>
+                        <p>Los servicios profesionales aplican IVA acorde a la vigencia y el momento de la facturación.</p>
+                    </div>
+                </div>
+
+                <div class="condition-card">
+                    <div class="condition-icon"><i class="fa-solid fa-ban"></i></div>
+                    <div class="condition-content">
+                        <h4>Actividades Extra</h4>
+                        <p>No se ejecutarán actividades extras a las planteadas en el alcance del proyecto o que no tengan relación con la solución planteada.</p>
+                    </div>
+                </div>
+
+                <div class="condition-card">
+                    <div class="condition-icon"><i class="fa-solid fa-credit-card"></i></div>
+                    <div class="condition-content">
+                        <h4>Forma de Pago: Proyectos</h4>
+                        <p>La forma de pago para el despliegue de los proyectos es del 50% al inicio y 50% al finalizar el proyecto a conformidad.</p>
+                    </div>
+                </div>
+
+                <div class="condition-card">
+                    <div class="condition-icon"><i class="fa-solid fa-money-check-dollar"></i></div>
+                    <div class="condition-content">
+                        <h4>Forma de Pago: Planes de Soporte</h4>
+                        <p>La forma de pago para los planes de soporte y mejora continua debe ser de manera anticipada (mensual), es decir, se debe cancelar el 100% en los primeros 30 días de la mensualidad del plan.</p>
+                    </div>
+                </div>
+
+                <div class="condition-card full-width">
+                    <div class="condition-icon"><i class="fa-solid fa-user-shield"></i></div>
+                    <div class="condition-content">
+                        <h4>Responsabilidad de Datos y Accesos</h4>
+                        <p>Es importantísimo recalcar que la calidad y disponibilidad de los datos de entrenamiento es responsabilidad del usuario final. El proveedor aplica buenas prácticas de gobernanza e integración, pero no se hace responsable por decisiones del modelo basadas en datos incorrectos ni por accesos indebidos a sistemas del cliente.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contacto" class="page">
+            <div class="dashboard-card">
+                <h2><i class="fa-solid fa-paper-plane"></i> Contáctenos</h2>
+                <div class="contact-grid">
+                    <a href="mailto:comercial@tittanium.co" class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div><strong>Correo</strong><span>comercial@tittanium.co</span></div>
+                    </a>
+                    <a href="https://maps.google.com/?q=calle+6+sur+43a-200+Medellin+Colombia" target="_blank" class="contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div><strong>Dirección</strong><span>calle 6 sur #43a-200, Medellín</span></div>
+                    </a>
+                    <a href="https://www.tittanium.co/" target="_blank" class="contact-item">
+                        <i class="fa-solid fa-globe"></i>
+                        <div><strong>Web</strong><span>www.tittanium.co</span></div>
+                    </a>
+                    <a href="https://www.instagram.com/tittanium_sas" target="_blank" class="contact-item">
+                        <i class="fa-brands fa-instagram"></i>
+                        <div><strong>Instagram</strong><span>@tittanium_sas</span></div>
+                    </a>
+                    <a href="https://www.linkedin.com/company/" target="_blank" class="contact-item">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <div><strong>LinkedIn</strong><span>Ver perfil</span></div>
+                    </a>
+                    <a href="https://wa.me/573216362185" target="_blank" class="contact-item whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <div><strong>WhatsApp</strong><span>+57 321 636 2185</span></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>Propuesta preparada para MOP Modular Places · &copy; 2026 Tittanium SAS. Todos los derechos reservados.</p>
+        </footer>
+    </main>
+
+    <script src="proyecto.js?v=1.0"></script>
+</body>
+</html>
